@@ -24,7 +24,14 @@ app.get('/emit', function (req,res)
 {
   console.log("Emitting Cloud Event");
 
-  const cloudevent = new CloudEvent("message.nodeemittedevent", "nodeemitter", "{\"text\":\"hello!\"}");
+  const cloudevent = new CloudEvent({
+    type: 'message.nodeemittedevent',
+    data: {
+      text: 'hello world'
+    },
+    source: 'nodeemitter'
+  });
+
   const message = HTTP.binary(cloudevent);
 
   axios({
