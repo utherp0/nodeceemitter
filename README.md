@@ -1,2 +1,1 @@
-# nodeceemitter
-Node.js cloud event emitter test
+Using the cloud event SDK test....
