@@ -45,3 +45,6 @@ app.get('/', function (req, res)
   res.render('node_test.html');
 });
 
+app.listen(port, ip);
+console.log('Server running on ' + ip + ':' + port);
+
